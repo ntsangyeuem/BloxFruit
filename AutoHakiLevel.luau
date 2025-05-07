@@ -6,7 +6,7 @@ local player = Players.LocalPlayer
 local currentJobId = game.JobId
 local placeId = game.PlaceId
 local visitedServers = {currentJobId}
-local maxPlayersThreshold = 11
+local maxPlayersThreshold = 2
 
 local function createGui()
     local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
@@ -78,7 +78,7 @@ local function hopToServer()
 end
 
 spawn(function()
-    for i = 40, 1, -1 do
+    for i = 20, 1, -1 do
         guiLabel.Text = "" .. i .. "giây"
         wait(1)
     end
